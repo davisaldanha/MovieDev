@@ -22,4 +22,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     // Query para retornar filmes por gênero e ano de lançamento
     List<Movie> findByGenreAndReleaseYear(String genre, Integer releaseYear);
+
+    //Query para verificar existência por título, ano de lançamento, classificação e gênero
+    boolean existsByTitleAndReleaseYearAndRatingAndGenre(String title, Integer releaseYear, Integer rating, String genre);
 }
